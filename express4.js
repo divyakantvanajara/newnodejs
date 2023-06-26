@@ -3,8 +3,8 @@ var app = express();
 
 //http://localhost:5000/add/10/3
 app.get("/add/:num1/:num2",function(request,response){
-    var num1 = request.params.num1;
-    var num2 = request.params.num2;
+    var num1 = parseInt(request.params.num1);
+    var num2 = parseInt(request.params.num2);
     var result = num1 + num2;
     response.send("addition = " + result);
 });
